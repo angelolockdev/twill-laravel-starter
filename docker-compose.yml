@@ -1,9 +1,9 @@
-version: "2"
+version: "3"
 
 services:
   # The Application
   app:
-    container_name: twill-laravel-container 
+    container_name: twill-laravel-app
     working_dir: /var/www
     build:
       context: ./
@@ -13,6 +13,9 @@ services:
     environment:
       - "DB_PORT=3306"
       - "DB_HOST=database"
+    restart: always
+    
+    
   
   #The Web Server
   web: 
@@ -23,20 +26,21 @@ services:
     volumes:
       - ./:/var/www   
     ports:
-      - 80:80
-     
+      - "80:80"
+    restart: always
 
   #The Database
   database:
     image: mysql:5.7.24
     volumes:
-      - dbdata:/var/lib/mysql
+      - db_data:/var/lib/mysql
     environment:
       - "MYSQL_DATABASE=twill-app"
       - "MYSQL_USER=root" 
       - "MYSQL_ROOT_PASSWORD=secret"
     ports:
       - "33061:3306"
+    restart: always
 
 volumes:
-  dbdata:
+  db_data:

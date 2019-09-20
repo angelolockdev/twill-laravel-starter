@@ -1,5 +1,7 @@
 FROM php:7.2-fpm
 
+COPY config/php.ini /usr/local/lib/
+
 RUN apt-get update && apt-get install -y libmcrypt-dev \
     && apt-get install -y default-libmysqlclient-dev \ 
     && pecl install mcrypt-1.0.1 \

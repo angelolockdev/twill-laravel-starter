@@ -10,6 +10,7 @@ services:
       dockerfile: app.dockerfile
     volumes:
       - ./:/var/www
+      - ./config/php:/usr/local/etc/php/php.ini
     environment:
       - "DB_PORT=3306"
       - "DB_HOST=database"

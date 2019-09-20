@@ -195,5 +195,9 @@ return [
     */
 
     'same_site' => null,
+    'locales' => [
+        'en',
+        'fr',
+    ],
 
 ];

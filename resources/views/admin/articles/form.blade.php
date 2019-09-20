@@ -12,4 +12,6 @@
         'name' => 'hero_image',
         'label' => 'Hero image',
     ])
+    
+    @formField('block_editor')
 @stop

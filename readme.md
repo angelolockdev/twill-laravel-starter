@@ -30,7 +30,7 @@ $ docker exec -it twill-laravel composer install
 ```
 ## New Project ?
 ### Installations
->>This tutorial just will guide you to the right way during your installing twill.
+>This tutorial just will guide you to the right way during your installing twill.
 
 Make sure you alreday have composer cli in your computer (If you don't have yet, check this link [https://getcomposer.org/](https://getcomposer.org/)). 
 ##### Installing Laravel 5.8.*
@@ -44,13 +44,13 @@ Twill is a package for Laravel applications [https://twill.io/docs/#Composer], i
 ```sh
 $ composer require area17/twill:"1.2.2" 
 ```  
->>Twill will automatically register its service provider cause we are using Laravel 5.8 .
+>Twill will automatically register its service provider cause we are using Laravel 5.8 .
 
 Now run the twill artisan command:
 ```sh
 $ php artisan twill:install
 ```
->>This command will migrate your database [https://twill.io/docs/#artisan].
+>This command will migrate your database [https://twill.io/docs/#artisan].
 
 # .env
 Now  add the following code to your .env file:
@@ -58,7 +58,7 @@ Now  add the following code to your .env file:
 APP_URL=twill-laravel.local
 ADMIN_APP_URL=admin.twill-laravel.local
 ```
->>That make you should be able to login at [admin.twill-laravel.local](http://admin.twill-laravel.local/)
+>That make you should be able to login at [admin.twill-laravel.local](http://admin.twill-laravel.local/)
 # npm 
 
 Add the following npm script to your project's "package.json" [https://twill.io/docs/#npm]:
